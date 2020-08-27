@@ -15,6 +15,7 @@ from numpy import linalg
 import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
 import random
 import os
+import sys
 
 #os.system("python -m pip install xgboost==1.0.0")
 import xgboost as xgb
@@ -710,6 +711,7 @@ class RBoost(BaseEstimator):
 # # Data Loading
 
 # %% [code] {"execution":{"iopub.execute_input":"2020-08-26T15:32:49.773567Z","iopub.status.busy":"2020-08-26T15:32:49.772655Z","iopub.status.idle":"2020-08-26T15:32:51.790174Z","shell.execute_reply":"2020-08-26T15:32:51.789349Z"},"papermill":{"duration":2.041142,"end_time":"2020-08-26T15:32:51.790302","exception":false,"start_time":"2020-08-26T15:32:49.749160","status":"completed"},"tags":[]}
+PART_NUMBER = 0
 if LOAD_ALL:
     # dataset_name = "spambase.csv"
     dataset_paths = [os.path.join(CLASS_DBS_PATH, dataset_name) for dataset_name in sorted(os.listdir(CLASS_DBS_PATH))]
@@ -720,6 +722,21 @@ if LOAD_ALL:
                 raw_db[1].loc[:, raw_db[1].columns != raw_db[1].columns[-1]], \
                 raw_db[1].loc[:, raw_db[1].columns[-1]]) \
                for raw_db in raw_dbs]
+    
+    if len(sys.argv) > 1:
+        num_parts = int(sys.argv[1])
+        curr_part = int(sys.argv[2])
+        assert curr_part <= num_parts
+        assert curr_part >= 1
+     
+        PART_NUMBER = curr_part
+        part_size = int(np.ceil(len(raw_dbs) / num_parts))
+
+        lower_idx, upper_idx = (curr_part - 1) * part_size, min(curr_part * part_size, len(raw_dbs) -1)
+        print("Working on dbs %d to %d" % (lower_idx, upper_idx))
+        raw_dbs = raw_dbs[lower_idx:upper_idx]
+        
+        
 
 else:
     dataset_name = "breast-cancer.csv"
@@ -860,6 +877,8 @@ def get_binary_metrics(y_test, y_test_pred, y_test_pred_per_label_probs, train_l
 
 
 def write_all_results(dbs_results):
+    if PART_NUMBER > 0:
+        RESULTS_CSV_PATH += ".%d" % PART_NUMBER
     with open(RESULTS_CSV_PATH, "w") as csvfile:
 
         fieldnames = ['dataset_name', 'alg_name']
