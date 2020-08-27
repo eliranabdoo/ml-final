@@ -16,7 +16,7 @@ import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
 import random
 import os
 
-os.system("python -m pip install xgboost==1.0.0")
+#os.system("python -m pip install xgboost==1.0.0")
 import xgboost as xgb
 
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -33,7 +33,6 @@ from sklearn.pipeline import Pipeline
 import lightgbm as lgb
 from sklearn.multiclass import OneVsRestClassifier
 
-import shap
 import matplotlib.pyplot as plt
 
 import time
@@ -41,7 +40,7 @@ import time
 import functools
 from functools import partial
 
-os.system("python -m pip install cvxopt")
+#os.system("python -m pip install cvxopt")
 
 from cvxopt import modeling, matrix, solvers
 from sklearn.base import BaseEstimator
@@ -50,10 +49,10 @@ from sklearn.preprocessing import LabelBinarizer
 from scipy.stats import friedmanchisquare
 from scipy.stats import truncnorm
 
-os.system("python -m pip install scikit_posthocs")
+#os.system("python -m pip install scikit_posthocs")
 from scikit_posthocs import posthoc_nemenyi_friedman
 
-import dill
+#import dill
 
 import csv
 
@@ -709,7 +708,7 @@ class RBoost(BaseEstimator):
 # %% [code] {"execution":{"iopub.execute_input":"2020-08-26T15:32:49.773567Z","iopub.status.busy":"2020-08-26T15:32:49.772655Z","iopub.status.idle":"2020-08-26T15:32:51.790174Z","shell.execute_reply":"2020-08-26T15:32:51.789349Z"},"papermill":{"duration":2.041142,"end_time":"2020-08-26T15:32:51.790302","exception":false,"start_time":"2020-08-26T15:32:49.749160","status":"completed"},"tags":[]}
 if LOAD_ALL:
     # dataset_name = "spambase.csv"
-    dataset_paths = [os.path.join(CLASS_DBS_PATH, dataset_name) for dataset_name in os.listdir(CLASS_DBS_PATH)]
+    dataset_paths = [os.path.join(CLASS_DBS_PATH, dataset_name) for dataset_name in sorted(os.listdir(CLASS_DBS_PATH))]
     # [("db_name", read_cvs)]
     raw_dbs = [(os.path.basename(dataset_path), pd.read_csv(dataset_path)) for dataset_path in dataset_paths]
     # [("db_name", X, y)]
@@ -939,7 +938,7 @@ ova_comp_model = OneVsRestClassifier(comp_model)
 # {db_name: {our_model: reulsts, compare_model: results}}
 dbs_results = {}
 
-with open("/kaggle/working/bad-dbs.txt", "w") as f:
+with open(os.path.join(WORKING_DIR, "bad-dbs.txt"), "w") as f:
     pass
 
 os.system('mkdir -p {}'.format(MODELS_DIR))
