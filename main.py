@@ -192,7 +192,7 @@ class ELPBoost(BaseEstimator):
     POSITIVE_CLASS = 1
     NEGATIVE_CLASS = 0
 
-    def __init__(self, kappa=1, threshold=10 ** -3, T=1000, reg=0.01, verbose=False, silent=False):
+    def __init__(self, kappa=1, threshold=10 ** -3, T=1000, reg=0.01, verbosa=False, silent=False):
         self.kappa = kappa
         self.threshold = threshold
         self.T = T
@@ -654,13 +654,17 @@ class RBoost(BaseEstimator):
         feature_idx = list(X.columns).index(feature)
         sorted_values = sampled_X.sort_values()
         consecutive_means = sorted_values.rolling(2, min_periods=1).mean()
-        thresholds = list(set(consecutive_means.values))
+
+        max_thresholds= 25.0
+        means = set(consecutive_means.values)
+        stride = int(np.ceil(len(means) / max_thresholds))
+        thresholds = list(sorted(means)[i] for i in range(0, len(means), stride))
         thresholds.append(sorted_values.max())
 
         max_acc = -np.inf
         best_threshold = thresholds[0]
         best_threshold_idx = 0
-
+        
         for idx, thresh in enumerate(thresholds):
             y_pred = (sampled_X >= thresh).astype(int).replace(0, -1)
             curr_acc = (y.values * y_pred.values.T).sum()
@@ -957,7 +961,7 @@ for db_name, X, y in raw_dbs:
         'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
         'estimator__model__T': [3, 5, 10, 20, 50],
         'estimator__model__reg': [0.01, 0.1, 1, 10, 20, 50, 100, 200, 500],
-        'estimator__model__silent': [True],
+        'estimator__model__silent': [False],
         'estimator__model__verbose': [False]
     }
 
@@ -1087,7 +1091,7 @@ for db_name, X, y in raw_dbs:
     except Exception as e:
         print("ERROR!", e)
         # catching wierd values
-        with open("/kaggle/working/bad-dbs.txt", "a") as f:
+        with open(os.path.join(WORKING_DIR, "bad-dbs.txt"), "a") as f:
             dbs_results.pop(db_name)
             f.write("{db_name}: {error}\n".format(db_name=db_name, error=e))
 
