@@ -73,7 +73,7 @@ CLASS_DBS_PATH = "./datasets/"
 META_DBS_PATH = "./ClassificationAllMetaFeatures.csv"
 
 RANDOM_SEED = 1332
-MAX_BATCH_SIZE = 250  # Max batch size for optimization in RBoost
+MAX_BATCH_SIZE = 100  # Max batch size for optimization in RBoost
 
 LOAD_ALL = True
 
@@ -90,7 +90,7 @@ WORKING_DIR = "./output"
 
 EVAL_FOLDS = 10
 HPT_FOLDS = 3
-RANDOM_CV_ITER = 50
+RANDOM_CV_ITER = 10
 
 RESULTS_CSV_PATH = os.path.join(WORKING_DIR, "results.csv")
 RESULT_CSV_PATH = lambda db_name: os.path.join(WORKING_DIR, "%s_results.csv" % db_name)
