@@ -90,7 +90,7 @@ WORKING_DIR = "./output"
 
 EVAL_FOLDS = 10
 HPT_FOLDS = 3
-RANDOM_CV_ITER = 50
+RANDOM_CV_ITER = 10
 
 RESULTS_CSV_PATH = os.path.join(WORKING_DIR, "results.csv")
 RESULT_CSV_PATH = lambda db_name: os.path.join(WORKING_DIR, "%s_results.csv" % db_name)
@@ -991,7 +991,7 @@ for db_name, X, y in raw_dbs:
     model_params = {
         'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
         'estimator__model__T': [3, 5, 10],
-        'estimator__model__reg': [0.01, 0.1, 1, 10, 20, 50, 100, 200, 500],
+        'estimator__model__reg': [1, 10, 20, 50, 100],
         'estimator__model__silent': [True],
         'estimator__model__verbose': [False]
     }
