@@ -33,6 +33,7 @@ from sklearn.model_selection import RandomizedSearchCV, LeaveOneOut
 from sklearn.pipeline import Pipeline
 import lightgbm as lgb
 from sklearn.multiclass import OneVsRestClassifier
+from datetime import datetime
 
 import matplotlib.pyplot as plt
 
@@ -53,7 +54,7 @@ from scipy.stats import truncnorm
 #os.system("python -m pip install scikit_posthocs")
 from scikit_posthocs import posthoc_nemenyi_friedman
 
-#import dill
+import dill
 
 import csv
 
@@ -72,7 +73,7 @@ CLASS_DBS_PATH = "./datasets/"
 META_DBS_PATH = "./ClassificationAllMetaFeatures.csv"
 
 RANDOM_SEED = 1332
-MAX_BATCH_SIZE = 500
+MAX_BATCH_SIZE = 250  # Max batch size for optimization in RBoost
 
 LOAD_ALL = True
 
@@ -619,7 +620,7 @@ class RBoost(BaseEstimator):
 
         for t in range(3, self.T + 1):
             if not self.silent:
-                print('=== Iteration %d ===' % (t - 2))
+                print('=== %s === Iteration %d ===' % (datetime.now(), (t - 2)))
             # A vector (n_weak_learners) where an entry j is the weighted (by d) sum of correct and incorrect
             # predictions of the corresponding j-th weak learner
             h_score = np.squeeze(np.dot(d, M).T).T
@@ -722,6 +723,8 @@ if LOAD_ALL:
                 raw_db[1].loc[:, raw_db[1].columns != raw_db[1].columns[-1]], \
                 raw_db[1].loc[:, raw_db[1].columns[-1]]) \
                for raw_db in raw_dbs]
+
+    raw_dbs = sorted(raw_dbs, key=lambda x: len(x[1]))  # sort by db length
     
     if len(sys.argv) > 1:
         num_parts = int(sys.argv[1])
@@ -732,9 +735,11 @@ if LOAD_ALL:
         PART_NUMBER = curr_part
         part_size = int(np.ceil(len(raw_dbs) / num_parts))
 
-        lower_idx, upper_idx = (curr_part - 1) * part_size, min(curr_part * part_size, len(raw_dbs) -1)
-        print("Working on dbs %d to %d" % (lower_idx, upper_idx))
-        raw_dbs = raw_dbs[lower_idx:upper_idx]
+        #lower_idx, upper_idx = (curr_part - 1) * part_size, min(curr_part * part_size, len(raw_dbs) -1)
+        #print("Working on dbs %d to %d" % (lower_idx, upper_idx))
+        #raw_dbs = raw_dbs[lower_idx:upper_idx]
+        print("working on dbs %s" % str(list(range(curr_part-1, len(raw_dbs), num_parts))))
+        raw_dbs = [raw_dbs[i] for i in range(curr_part-1, len(raw_dbs), num_parts)]
         
         
 
@@ -859,6 +864,10 @@ def get_binary_metrics(y_test, y_test_pred, y_test_pred_per_label_probs, train_l
         y_pred_binarized = lb.transform(y_test_pred)
         lb_classes = list(lb.classes_)
 
+        if len(lb_classes) == 2:
+            y_true_binarized = np.hstack((y_true_binarized, 1-y_true_binarized))
+            y_pred_binarized = np.hstack((y_pred_binarized, 1-y_pred_binarized))
+
         for label_idx, curr_label in enumerate(test_labels):
             curr_y_true = y_true_binarized[:, lb_classes.index(curr_label)]
             curr_y_pred = y_pred_binarized[:, lb_classes.index(curr_label)]
@@ -878,8 +887,10 @@ def get_binary_metrics(y_test, y_test_pred, y_test_pred_per_label_probs, train_l
 
 def write_all_results(dbs_results):
     if PART_NUMBER > 0:
-        RESULTS_CSV_PATH += ".%d" % PART_NUMBER
-    with open(RESULTS_CSV_PATH, "w") as csvfile:
+        results_path = RESULTS_CSV_PATH + (".%d" % PART_NUMBER)
+    else:
+        results_path = RESULTS_CSV_PATH
+    with open(results_path, "w") as csvfile:
 
         fieldnames = ['dataset_name', 'alg_name']
 
@@ -902,6 +913,7 @@ def write_all_results(dbs_results):
 
 
 def write_single_db_results(db_results, db_name):
+    print("writing single db results %s" % db_name)
     with open(RESULT_CSV_PATH(db_name), "w") as csvfile:
 
         fieldnames = ['dataset_name', 'alg_name']
@@ -978,9 +990,9 @@ for db_name, X, y in raw_dbs:
 
     model_params = {
         'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
-        'estimator__model__T': [3, 5, 10, 20, 50],
+        'estimator__model__T': [3, 5, 10],
         'estimator__model__reg': [0.01, 0.1, 1, 10, 20, 50, 100, 200, 500],
-        'estimator__model__silent': [False],
+        'estimator__model__silent': [True],
         'estimator__model__verbose': [False]
     }
 
@@ -1013,7 +1025,7 @@ for db_name, X, y in raw_dbs:
     is_binary = len(y.unique()) == 2  # No special case for binary
     try:
         for train_index, test_index in kf.split(X, y):
-            print("{}:{}".format(db_name, fold_num))
+            print("{}:{}:Fold_{}".format(datetime.now(), db_name, fold_num))
             # --- get fold and preprocess ---
             X_train, X_test = X.iloc[train_index], X.iloc[test_index]
             y_train, y_test = y[train_index], y[test_index]
@@ -1046,11 +1058,13 @@ for db_name, X, y in raw_dbs:
             print("training our model")
             curr_fold_results['train_time'], curr_fold_results['infer_time'] = get_time_metrics(cv, X_train, y_train,
                                                                                                 X_test)
+            print("Finished training our model")
             print("training comparison model")
             curr_fold_comp_results['train_time'], curr_fold_comp_results['infer_time'] = get_time_metrics(comp_cv,
                                                                                                           X_train,
                                                                                                           y_train,
                                                                                                           X_test)
+            print("Finished training comparison model")
 
             # --- save trained models ---
             model_path = MODELS_DIR + "/model_fold_" + str(fold_num) + "_db_name_" + db_name
@@ -1118,6 +1132,9 @@ for db_name, X, y in raw_dbs:
 
 print(dbs_results)
 write_all_results(dbs_results)
+
+print("Done writing results in part %d" % PART_NUMBER)
+sys.exit(1)
 
 # %% [markdown] {"papermill":{"duration":null,"end_time":null,"exception":null,"start_time":null,"status":"pending"},"tags":[]}
 # # Statistic hypothesis
