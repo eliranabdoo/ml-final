@@ -3,3 +3,11 @@ arrhythmia.csv: probabilities contain NaN
 soybean.csv: Input contains NaN, infinity or a value too large for dtype('float64').
 statlog-image.csv: Input contains NaN, infinity or a value too large for dtype('float64').
 waveform-noise.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+newton_hema.csv: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+hayes-roth.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+low-res-spect.csv: probabilities contain NaN
+energy-y2.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+conn-bench-vowel-deterding.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+plant-shape.csv: probabilities contain NaN
+image-segmentation.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+wine-quality-white.csv: Input contains NaN, infinity or a value too large for dtype('float64').
