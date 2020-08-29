@@ -715,7 +715,7 @@ class RBoost(BaseEstimator):
 PART_NUMBER = 0
 if LOAD_ALL:
     # dataset_name = "spambase.csv"
-    bad_dbs_path = os.path.join(WORKING_DIR, "bad-dbs.txt")
+    bad_dbs_path = os.path.join(WORKING_DIR, "bad-dbs.txt.0")
     bad_dbs_content = ''.join(open(bad_dbs_path, 'r').readlines())
     dataset_paths = [os.path.join(CLASS_DBS_PATH, dataset_name) for dataset_name in sorted(os.listdir(CLASS_DBS_PATH)) if dataset_name in bad_dbs_content]
     # [("db_name", read_cvs)]
