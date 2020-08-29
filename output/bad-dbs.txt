@@ -1,0 +1,5 @@
+wine.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+arrhythmia.csv: probabilities contain NaN
+soybean.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+statlog-image.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+waveform-noise.csv: Input contains NaN, infinity or a value too large for dtype('float64').
