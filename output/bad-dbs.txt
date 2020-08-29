@@ -1,0 +1,5 @@
+breast-tissue.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+dermatology.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+yeast.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+mfeat-karhunen.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+wall-following.csv: Input contains NaN, infinity or a value too large for dtype('float64').
