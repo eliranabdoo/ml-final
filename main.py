@@ -489,8 +489,8 @@ class RBoost(BaseEstimator):
     def predict_proba(self, X):
         res = (np.dot(self.w.T,
                       np.squeeze([np.apply_along_axis(h, 1, X) for h in self.H])) + 1.0) / 2.0  # score is in [-1, 1]
-        res = np.vstack([1 - res, res]).T
-        return np.array(res)
+        res = np.array(np.vstack([1 - res, res]).T)
+        return res
 
     def predict(self, X):
         """
@@ -744,7 +744,7 @@ if LOAD_ALL:
         
 
 else:
-    dataset_name = "breast-cancer.csv"
+    dataset_name = "teachingAssistant.csv"
     dataset_path = os.path.join(CLASS_DBS_PATH, dataset_name)
 
     raw_dbs = [(os.path.basename(dataset_path), pd.read_csv(dataset_path))]
@@ -1077,9 +1077,9 @@ for db_name, X, y in raw_dbs:
             best_params = cv.best_params_
             curr_fold_comp_results['best_params'] = best_comp_params
             curr_fold_results['best_params'] = best_params
-
             # --- get predictions for MultiRBoost --- #
             y_test_pred_per_label_scores = cv.predict_proba(X_test)
+            y_test_pred_per_label_scores[np.isnan(y_test_pred_per_label_scores)] = 1.0/y_test_pred_per_label_scores.shape[1]  # nan refers to 1.0 for each binary
             y_test_pred = cv.predict(X_test)
 
             train_labels = cv.best_estimator_.classes_
@@ -1087,6 +1087,7 @@ for db_name, X, y in raw_dbs:
 
             # --- get predictions for LightGBM --- #
             y_test_pred_comp_per_label_scores = comp_cv.predict_proba(X_test)
+            y_test_pred_comp_per_label_scores[np.isnan(y_test_pred_comp_per_label_scores)] = 1.0/y_test_pred_comp_per_label_scores.shape[1]  # nan refers to 1.0 for each binary
             y_test_pred_comp = comp_cv.predict(X_test)
 
             # metrics applicable in multiclass setting ---percision--- #
