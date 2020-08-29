@@ -1,0 +1,3 @@
+visualizing_livestock.csv: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+seeds.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+semeion.csv: Input contains NaN, infinity or a value too large for dtype('float64').
