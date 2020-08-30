@@ -5,9 +5,9 @@ import random
 from constants import RANDOM_SEED
 import pandas as pd
 
+
 class ELPBoost(BaseEstimator):
-    """
-    Entropy Regularized Boost
+    """Entropy Regularized Boost
     -------
     weak_learners: A list of weak learners where:
                    a weak learner h gets as a parameter an entry x: array_like, shape (1, n_features)
@@ -22,16 +22,18 @@ class ELPBoost(BaseEstimator):
         The regularization parameter. Corresponds to 1/eta in the paper.
     Attributes
     -------
-    converged: bool
-        True when convergence reached in fit() and fit_transform().
     u: array_like, shape (n_samples, )
         Misclassification cost
-    w: array_like, shape (n_selected_features, )
-        Weights of selected features, such features are selected because corresponding weights are lower than threshold.
-    beta: float
-        beta in LPBoost
-    idx: list of integers
-        Indices of selected features
+    w: array_like, shape (num_weak_learners, )
+        Last set of weak learners weights, according to the column generation method.
+    slacks: array_like, shape (n_samples, )
+        Last set of slack variable for the soft margin problem.
+    d_0: array_like,  shape (n_samples, )
+        Initial samples distribution, set to uniform
+    H_weak: array
+        The set of chosen weak learners
+    H: array
+        The weak learners universe
     """
     POSITIVE_CLASS = 1
     NEGATIVE_CLASS = 0
@@ -53,8 +55,9 @@ class ELPBoost(BaseEstimator):
 
     @staticmethod
     def softmax(x):
+        # Numerical stability correction
         e_x = np.exp(x - np.max(x))
-        return e_x / e_x.sum(axis=0)  # only difference
+        return e_x / e_x.sum(axis=0)
 
     def predict_proba(self, X):
         """
@@ -135,7 +138,8 @@ class ELPBoost(BaseEstimator):
             dfdphiiphii = reg_inv * (np.multiply(weighted_scores_exp,
                                                  sum_weighted_scores_exp - weighted_scores_exp) / sum_weighted_scores_exp_square)
             # dfdwiwj, dfwiphij are zeros
-            dfdphiiwj = reg_inv * ((uw_mult * sum_weighted_scores_exp - weighted_scores_exp * uw_mult_sum) / sum_weighted_scores_exp_square)
+            dfdphiiwj = reg_inv * ((
+                                               uw_mult * sum_weighted_scores_exp - weighted_scores_exp * uw_mult_sum) / sum_weighted_scores_exp_square)
 
             H[T:, T:] = dfdphiiphij
             H[T:, :T] = dfdphiiwj
@@ -151,7 +155,7 @@ class ELPBoost(BaseEstimator):
             wphi = solvers.cp(F, G=G, h=h, A=A, b=b)['x']
             self.w = wphi[:T, :]
             self.slacks = wphi[T:, :]
-        except Exception as e:
+        except Exception as e:  # Catch rank errors and continue to next iteration
             self.slacks = prev_slacks
             self.w = prev_w
             try:
@@ -159,13 +163,13 @@ class ELPBoost(BaseEstimator):
             except:
                 self.w = np.concatenate((self.w, [1 / (len(self.w) + 1)]), axis=0)
             self.w /= np.sum(self.w)
+
         scores = ((-1 / self.reg) * np.squeeze(np.asarray(np.dot(self.u, self.w) + self.slacks))) + np.log(
             self.d_0)  # Update according to Equation (6)
         return self.softmax(scores)
 
     def _fitString(self, X, y):
-        """
-        Perform ELPBoost model fitting on X,y pair.
+        """Perform ELPBoost model fitting on X,y pair.
         """
         n_samples = y.size
 
@@ -216,7 +220,6 @@ class ELPBoost(BaseEstimator):
                 print('calculated w min %10.6f w max %10.6f' % (np.min(self.w), np.max(self.w)))
                 print('calculated d min %10.6f d max %10.6f' % (np.min(d), np.max(d)))
 
-        # self.w = self.w[np.where(self.w >= self.threshold)]
         if self.verbose:
             print("Final w is %s" % self.w)
             print("Chose the weak learners %s" % chosen_wls)
@@ -255,8 +258,6 @@ class ELPBoost(BaseEstimator):
         return [ELPBoost.generate_weak_learner(X, y, feature) for feature in sampled_X.columns]
 
     def fit(self, X, y):
-        """ Predicts for pair X,y where y is in {0, 1}
-        """
         positive_mask = y == self.POSITIVE_CLASS
         negative_mask = y == self.NEGATIVE_CLASS
         y[positive_mask] = 1

@@ -96,7 +96,7 @@ def get_binary_metrics(y_test, y_test_pred, y_test_pred_per_label_probs, train_l
     return fpr, tpr, pr_auc, roc_auc
 
 
-def write_all_results(dbs_results, part_number):
+def write_all_results(dbs_results, part_number=0):
     if part_number > 0:
         results_path = RESULTS_CSV_PATH + (".%d" % part_number)
     else:

@@ -2,7 +2,10 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
+
 class DelayedColumnTransformer(TransformerMixin, BaseEstimator):
+    """Wraps Column transformer in a pipeline, divided by dtypes
+    Used to avoid a single, parallel, activation of the transform function, to use it in a sequential manner"""
     @staticmethod
     def get_dtype_columns_indices(df, dtype):
         columns = list(df.columns)
@@ -13,14 +16,12 @@ class DelayedColumnTransformer(TransformerMixin, BaseEstimator):
         self.pipeline = None
 
     def fit(self, X, y=None):
-        # print("Number of columns: %d" % len(X.columns))
-        # print("Number of categorical %d, numerical %d" % (len(self.get_dtype_columns_indices(X, np.object)), len(self.get_dtype_columns_indices(X, np.number))))
         self.pipeline = ColumnTransformer([
             ("%s" % str(dtype),
              Pipeline([("%s_%d" % (transformer.__class__.__name__, idx), transformer) for transformer in transformers]),
              self.get_dtype_columns_indices(X, dtype)) for
             idx, (dtype, transformers) in enumerate(self.dtype_to_transformers)]
-            , remainder='drop')  # Should not drop anything
+            , remainder='drop')
 
         return self.pipeline.fit(X, y)
 

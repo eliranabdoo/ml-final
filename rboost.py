@@ -10,11 +10,7 @@ import pandas as pd
 # loosly based on https://github.com/YuxinSun/LPBoost-Using-String-and-Fisher-Features
 
 class RBoost(BaseEstimator):
-    """
-    Linear programming boosting (LPBoost) model
-    Representation of a LPBoost model.
-    This class allows for selecting weak learners (features) from an explicit hypothesis space.
-    Parameters
+    """Riemennian Distance Regularized Boost
     -------
     weak_learners: A list of weak learners where:
                    a weak learner h gets as a parameter an entry x: array_like, shape (1, n_features)
@@ -23,22 +19,28 @@ class RBoost(BaseEstimator):
         Constant factor which penalizes the slack variables
     threshold: float, optional
         Threshold of feature selection. Features with weights below threshold would be discarded.
-    n_iter: int, optional
+    T: int, optional
         Maximum iteration of LPBoost
-    verbose: int, default 0
-        Enable verbose output. If greater than 0 then it prints the iterations in fit() and fit_transform().
+    reg: float, optinal
+        The regularization parameter. Corresponds to 1/eta in the paper.
+    batch_size_ratio: float, optional
+        Capping ratio for number of constraints, used to improve running time
+    batch_size_ratio: int, optional
+        Capping bound for number of constraints, used to improve running time
     Attributes
     -------
-    converged: bool
-        True when convergence reached in fit() and fit_transform().
     u: array_like, shape (n_samples, )
         Misclassification cost
-    w: array_like, shape (n_selected_features, )
-        Weights of selected features, such features are selected because corresponding weights are lower than threshold.
-    beta: float
-        beta in LPBoost
-    idx: list of integers
-        Indices of selected features
+    w: array_like, shape (num_weak_learners, )
+        Last set of weak learners weights, according to the column generation method.
+    slacks: array_like, shape (n_samples, )
+        Last set of slack variable for the soft margin problem.
+    d_0: array_like,  shape (n_samples, )
+        Initial samples distribution, set to uniform
+    H_weak: array
+        The set of chosen weak learners
+    H: array
+        The weak learners universe
     """
     POSITIVE_CLASS = 1
     NEGATIVE_CLASS = 0
@@ -83,9 +85,6 @@ class RBoost(BaseEstimator):
         :return: array_like, shape (n_samples, )
             Predicted labels
         """
-        # return a prediction score vector (len(X))
-
-        # TODO CHECK WHY UNUSED
         res = self.predict_proba(X)
         positive_mask = res >= 0.5
         negative_mask = res < 0.5
@@ -105,30 +104,12 @@ class RBoost(BaseEstimator):
         reim_delta = np.arccos(1 if np.isclose([dot_prod], [1]) else dot_prod)
         reg_factor = math.exp(-1 * self.reg * reim_delta)
 
-        # reg_factor = (self.reg ** 2) * 0.25 * (1/1-np.dot(self.d_0, d)**2)
         d *= reg_factor
 
-        # return np.squeeze(np.asarray(d/np.sum(d)))
         return self.softmax(d)
 
     def _update_learners_weights(self, t, samples_dist):
-        """ Linear programming optimisation for LPBoost
-        Parameters
-        -------
-        :param z: array_like, shape (n_iterations, n_samples)
-            transposed hypothesis space in current iteration
-        :param y: array_like, shape (n_samples, )
-            desired labels for classification
-        :param D: float
-            optimisation parameter, practically D = 1/(n_samples, nu)
-        Return
-        -------
-        :return d: array_like, shape (n_samples, )
-            misclassification cost
-        :return beta: float
-            beta in LPBoost
-        :return c4.multiplier.value: array_like, shape (n_features, )
-            weights of weak learners
+        """ Solve equation (3) in the paper, returns the set of lagrange multipliers that matches w
         """
         n = len(samples_dist)
         batch_size = min(self.max_batch_size, int(n * self.batch_size_ratio))
@@ -159,20 +140,6 @@ class RBoost(BaseEstimator):
         return w.value
 
     def _fitString(self, X, y):
-        """
-        Perform LPBoost on string features. Usually a l2 normalisation is performed. If the hypothesis space contains
-        positive/ negative features only, then the space needs to be duplicated by its additive inverse. This is to
-        ensure the performance of LPBoost.
-        Parameters
-        -------
-        :param X: array_like, shape (n_samples, n_features)
-            Data matrix of explicit features
-        :param y: array_like, shape (n_samples,)
-            Desired labels
-        Returns
-        -------
-        :return:
-        """
         self.n_samples = y.size
 
         self.d_0 = np.ones(self.n_samples) / self.n_samples
@@ -231,6 +198,9 @@ class RBoost(BaseEstimator):
 
     @staticmethod
     def generate_weak_learner(X, y, feature):
+        """Generate a weak learner according to the method presented in the paper
+        We go over a subset of consecutive means in the chosen feature, and chose the threshold
+        that results in the best separation"""
         sampled_X = X[feature]
         feature_idx = list(X.columns).index(feature)
         sorted_values = sampled_X.sort_values()
@@ -256,6 +226,9 @@ class RBoost(BaseEstimator):
 
     @staticmethod
     def generate_H(X, y, size_H=None):
+        """ H is generated per feature
+        We can reduce H to a smaller, sampled set of features as well
+        """
         if type(X) is not pd.DataFrame:
             X = pd.DataFrame(data=X)
         if type(y) is not pd.Series:
@@ -267,18 +240,6 @@ class RBoost(BaseEstimator):
         return [RBoost.generate_weak_learner(X, y, feature) for feature in sampled_X.columns]
 
     def fit(self, X, y):
-        """
-        Fit LPBoost model to data.
-        Parameters
-        -------
-        :param X: array_like, shape (n_samples, n_features)
-            Data matrix of explicit features
-        :param y: array_like, shape (n_samples,)
-            Desired labels
-        Returns:
-        -------
-        :return:
-        """
         positive_mask = y == self.POSITIVE_CLASS
         negative_mask = y == self.NEGATIVE_CLASS
         y[positive_mask] = 1

@@ -4,6 +4,7 @@ import pandas as pd
 import shap
 from constants import PLOTS_DIR, PLOTS_FORMAT, IMPORTANCE_TYPES, IMPORTANCE_DIR, PLOT_TOP_FEATURES, SHAP_DIR
 
+
 def close_and_increase_plt():
     plt.close(globals()["figure_num"])
     globals()["figure_num"] += 1
@@ -29,12 +30,13 @@ def generate_importance(model, test_db_name):
 
 
 def generate_shap(model, test_db_name, X_test):
-    booster_bytearray = model.get_booster().save_raw()[4:]
-
-    def myfun(self=None):
-        return booster_bytearray
-
-    model.get_booster().save_raw = myfun
+    # For XGB>1.0.0
+    # booster_bytearray = model.get_booster().save_raw()[4:]
+    #
+    # def myfun(self=None):
+    #     return booster_bytearray
+    #
+    # model.get_booster().save_raw = myfun
 
     # create a SHAP explainer and values
     explainer = shap.TreeExplainer(model)

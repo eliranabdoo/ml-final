@@ -23,6 +23,7 @@ STAT_CHOSEN_METRIC = 'accuracy'
 
 WEIGHTED_METRICS = True
 WORKING_DIR = "./output"
+RESULTS_DIR = WORKING_DIR
 
 EVAL_FOLDS = 10
 HPT_FOLDS = 3
@@ -71,7 +72,7 @@ def get_truncated_normal(mean=0., sd=1., low=0, upp=10):
 def get_integer_truncated_normal(*args, **kwargs):
     res = get_truncated_normal(*args, **kwargs)
 
-    def integer_wrap(*args, f=None, **kwargs):
+    def integer_wrap(f=None, *args, **kwargs):
         return int(np.round(f(*args, **kwargs)))
 
     res.rvs = partial(integer_wrap, f=res.rvs)
@@ -91,7 +92,6 @@ explored_num_leaves = get_integer_truncated_normal(mean=28, sd=10, low=params_ra
 
 explored_lambda = get_truncated_normal(mean=22, sd=15, low=params_ranges['model__lambda'][0],
                                        upp=params_ranges['model__lambda'][1])
-
 
 comp_model_params = {
     "estimator__model__n_estimators": explored_n_estimators,
