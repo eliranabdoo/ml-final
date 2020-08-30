@@ -1,0 +1,1043 @@
+working on dbs [0, 4, 8, 12, 16, 20, 24, 28]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:297: FutureWarning: Setting a random_state has no effect since shuffle is False. This will raise an error in 0.24. You should leave random_state to its default (None), or set shuffle=True.
+  FutureWarning
+2020-08-29 10:49:31.631333:breast-tissue.csv:Fold_1
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:50:50.812368:breast-tissue.csv:Fold_2
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:52:07.347345:breast-tissue.csv:Fold_3
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:53:26.674282:breast-tissue.csv:Fold_4
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:54:46.536893:breast-tissue.csv:Fold_5
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:56:03.887561:breast-tissue.csv:Fold_6
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:57:23.065337:breast-tissue.csv:Fold_7
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 10:58:43.206847:breast-tissue.csv:Fold_8
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:00:04.374608:breast-tissue.csv:Fold_9
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:01:21.852306:breast-tissue.csv:Fold_10
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+writing single db results breast-tissue.csv
+2020-08-29 11:02:39.808751:teachingAssistant.csv:Fold_1
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:03:18.814476:teachingAssistant.csv:Fold_2
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:03:58.491974:teachingAssistant.csv:Fold_3
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:04:37.945617:teachingAssistant.csv:Fold_4
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:05:16.651178:teachingAssistant.csv:Fold_5
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:05:55.677134:teachingAssistant.csv:Fold_6
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:06:35.917753:teachingAssistant.csv:Fold_7
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:07:15.934275:teachingAssistant.csv:Fold_8
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:07:56.243548:teachingAssistant.csv:Fold_9
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:08:36.427924:teachingAssistant.csv:Fold_10
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+writing single db results teachingAssistant.csv
+2020-08-29 11:09:16.425425:spect.csv:Fold_1
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+2020-08-29 11:09:34.176594:spect.csv:Fold_2
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+2020-08-29 11:09:52.028647:spect.csv:Fold_3
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:10:09.063991:spect.csv:Fold_4
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:10:26.341026:spect.csv:Fold_5
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:10:44.127458:spect.csv:Fold_6
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:11:02.065325:spect.csv:Fold_7
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:11:19.556982:spect.csv:Fold_8
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:11:37.444729:spect.csv:Fold_9
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:11:55.276803:spect.csv:Fold_10
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+writing single db results spect.csv
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=10.
+  % (min_groups, self.n_splits)), UserWarning)
+2020-08-29 11:12:12.790992:arrhythmia.csv:Fold_1
+training our model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 1 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 1 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 11:40:00.071364:arrhythmia.csv:Fold_2
+training our model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 1 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 1 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 12:08:34.041635:arrhythmia.csv:Fold_3
+training our model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 12:37:07.822612:arrhythmia.csv:Fold_4
+training our model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 13:06:00.862908:arrhythmia.csv:Fold_5
+training our model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+Finished training our model
+training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1814: UserWarning: y_pred contains classes not in y_true
+  warnings.warn('y_pred contains classes not in y_true')
+2020-08-29 13:35:25.291001:arrhythmia.csv:Fold_6
+training our model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_split.py:672: UserWarning: The least populated class in y has only 2 members, which is less than n_splits=3.
+  % (min_groups, self.n_splits)), UserWarning)
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+ERROR! probabilities contain NaN
+2020-08-29 14:03:51.116802:statlog-vehicle.csv:Fold_1
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:05:55.723661:statlog-vehicle.csv:Fold_2
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:08:00.142018:statlog-vehicle.csv:Fold_3
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:10:03.701647:statlog-vehicle.csv:Fold_4
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1029, in __call__
+    if self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:12:05.178906:statlog-vehicle.csv:Fold_5
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:14:12.145081:statlog-vehicle.csv:Fold_6
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1029, in __call__
+    if self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:16:12.617089:statlog-vehicle.csv:Fold_7
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: divide by zero encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ERROR! Input contains NaN, infinity or a value too large for dtype('float64').
+2020-08-29 14:18:17.640705:semeion.csv:Fold_1
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 14:46:00.037062:semeion.csv:Fold_2
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 15:13:44.254215:semeion.csv:Fold_3
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: divide by zero encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ERROR! Input contains NaN, infinity or a value too large for dtype('float64').
+2020-08-29 15:41:46.809900:mfeat-karhunen.csv:Fold_1
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 16:27:02.548007:mfeat-karhunen.csv:Fold_2
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+ERROR! probabilities contain NaN
+2020-08-29 17:08:37.221807:waveform-noise.csv:Fold_1
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 18:15:59.321379:waveform-noise.csv:Fold_2
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 19:23:30.700634:waveform-noise.csv:Fold_3
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 20:31:04.941322:waveform-noise.csv:Fold_4
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 21:38:02.134579:waveform-noise.csv:Fold_5
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 22:45:18.337293:waveform-noise.csv:Fold_6
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-29 23:53:20.951267:waveform-noise.csv:Fold_7
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-30 01:00:48.560947:waveform-noise.csv:Fold_8
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-30 02:07:19.376304:waveform-noise.csv:Fold_9
+training our model
+main_solve_bad_dbs.py:522: RuntimeWarning: divide by zero encountered in true_divide
+  d = np.squeeze(np.asarray(self.d_0 / uw_square.T))
+main_solve_bad_dbs.py:486: RuntimeWarning: invalid value encountered in subtract
+  e_x = np.exp(x - np.max(x))
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py:552: FitFailedWarning: Estimator fit failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/model_selection/_validation.py", line 531, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 245, in fit
+    for i, column in enumerate(columns))
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 1032, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 847, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 765, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in __call__
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/joblib/parallel.py", line 253, in <listcomp>
+    for func, args, kwargs in self.items]
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py", line 81, in _fit_binary
+    estimator.fit(X, y)
+  File "/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 335, in fit
+    self._final_estimator.fit(Xt, y, **fit_params_last_step)
+  File "main_solve_bad_dbs.py", line 708, in fit
+    return self._fitString(X, y)
+  File "main_solve_bad_dbs.py", line 636, in _fitString
+    self.w = np.matrix(self._update_learners_weights(t, d))
+  File "main_solve_bad_dbs.py", line 556, in _update_learners_weights
+    batch_indices = np.random.choice(a=list(range(n)), replace=False, p=samples_dist, size=batch_size)
+  File "mtrand.pyx", line 928, in numpy.random.mtrand.RandomState.choice
+ValueError: probabilities contain NaN
+
+  FitFailedWarning)
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+2020-08-30 03:13:47.170158:waveform-noise.csv:Fold_10
+training our model
+Finished training our model
+training comparison model
+Finished training comparison model
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/multiclass.py:382: RuntimeWarning: invalid value encountered in true_divide
+  Y /= np.sum(Y, axis=1)[:, np.newaxis]
+/home/matanliber11/ml-final/venv/lib/python3.6/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+writing single db results waveform-noise.csv
+{'breast-tissue.csv': {'RBoost': [{'fold_num': 1, 'train_time': 75.1803948879242, 'infer_time': 1.200112429532138, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.3333333333333333, 'estimator__model__T': 10}, 'accuracy': 0.16666666666666666, 'precision': 0.07438016528925619, 'fpr': 0.2727272727272727, 'tpr': 0.2727272727272727, 'pr_auc': 0.2524104683195592, 'roc_auc': 0.5}, {'fold_num': 2, 'train_time': 72.53577017784119, 'infer_time': 0.46879594976251776, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.020964360587002094, 'estimator__model__T': 3}, 'accuracy': 0.16666666666666666, 'precision': 0.03636363636363637, 'fpr': 0.1818181818181818, 'tpr': 0.18181818181818182, 'pr_auc': 0.17024793388429754, 'roc_auc': 0.5}, {'fold_num': 3, 'train_time': 75.33864974975586, 'infer_time': 1.1540759693492544, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.010482180293501047, 'estimator__model__T': 10}, 'accuracy': 0.16666666666666666, 'precision': 0.011363636363636364, 'fpr': 0.18787878787878787, 'tpr': 0.18181818181818182, 'pr_auc': 0.16012396694214875, 'roc_auc': 0.496969696969697}, {'fold_num': 4, 'train_time': 75.78041553497314, 'infer_time': 1.1598413640802558, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.010482180293501047, 'estimator__model__T': 10}, 'accuracy': 0.16666666666666666, 'precision': 0.03305785123966942, 'fpr': 0.09090909090909091, 'tpr': 0.09090909090909091, 'pr_auc': 0.2165977961432507, 'roc_auc': 0.5}, {'fold_num': 5, 'train_time': 73.29610657691956, 'infer_time': 0.6614381616765803, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.031446540880503145, 'estimator__model__T': 5}, 'accuracy': 0.16666666666666666, 'precision': 0.03305785123966942, 'fpr': 0.2727272727272727, 'tpr': 0.2727272727272727, 'pr_auc': 0.25, 'roc_auc': 0.5}, {'fold_num': 6, 'train_time': 75.03480744361877, 'infer_time': 1.1712421070445669, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.031446540880503145, 'estimator__model__T': 10}, 'accuracy': 0.2222222222222222, 'precision': 0.3090909090909091, 'fpr': 0.1616161616161616, 'tpr': 0.21212121212121213, 'pr_auc': 0.20798898071625346, 'roc_auc': 0.5252525252525253}, {'fold_num': 7, 'train_time': 76.14480257034302, 'infer_time': 1.2787580490112305, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.020964360587002094, 'estimator__model__T': 10}, 'accuracy': 0.16666666666666666, 'precision': 0.0125, 'fpr': 0.12777777777777777, 'tpr': 0.1, 'pr_auc': 0.265, 'roc_auc': 0.4861111111111111}, {'fold_num': 8, 'train_time': 77.06489419937134, 'infer_time': 1.2766838073730469, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.031446540880503145, 'estimator__model__T': 10}, 'accuracy': 0.25, 'precision': 0.2111111111111111, 'fpr': 0.08888888888888889, 'tpr': 0.2, 'pr_auc': 0.28944444444444445, 'roc_auc': 0.5555555555555556}, {'fold_num': 9, 'train_time': 73.45105123519897, 'infer_time': 0.4990100860595703, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 20, 'estimator__model__kappa': 0.020964360587002094, 'estimator__model__T': 3}, 'accuracy': 0.25, 'precision': 0.2111111111111111, 'fpr': 0.08888888888888889, 'tpr': 0.15000000000000002, 'pr_auc': 0.17222222222222222, 'roc_auc': 0.5305555555555557}, {'fold_num': 10, 'train_time': 73.89861106872559, 'infer_time': 0.7376909255981445, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.3333333333333333, 'estimator__model__T': 5}, 'accuracy': 0.08333333333333333, 'precision': 0.025, 'fpr': 0.2, 'tpr': 0.1, 'pr_auc': 0.24000000000000005, 'roc_auc': 0.45000000000000007}], 'LGBoost': [{'fold_num': 1, 'train_time': 3.888410806655884, 'infer_time': 0.19838593222878198, 'best_params': {'estimator__model__learning_rate': 0.1580341587319542, 'estimator__model__max_depth': 13, 'estimator__model__n_estimators': 231, 'estimator__model__num_leaves': 27, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 25.00021143575623}, 'accuracy': 0.4166666666666667, 'precision': 0.5454545454545454, 'fpr': 0.07676767676767676, 'tpr': 0.4545454545454546, 'pr_auc': 0.753896103896104, 'roc_auc': 0.688888888888889}, {'fold_num': 2, 'train_time': 3.9119937419891357, 'infer_time': 0.1959583976052024, 'best_params': {'estimator__model__learning_rate': 0.1257563696803999, 'estimator__model__max_depth': 17, 'estimator__model__n_estimators': 148, 'estimator__model__num_leaves': 41, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 9.566126547686462}, 'accuracy': 0.75, 'precision': 0.712121212121212, 'fpr': 0.05858585858585859, 'tpr': 0.7272727272727273, 'pr_auc': 0.9090909090909091, 'roc_auc': 0.8343434343434343}, {'fold_num': 3, 'train_time': 3.8812127113342285, 'infer_time': 0.20159374583851206, 'best_params': {'estimator__model__learning_rate': 0.1580341587319542, 'estimator__model__max_depth': 13, 'estimator__model__n_estimators': 231, 'estimator__model__num_leaves': 27, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 25.00021143575623}, 'accuracy': 0.5, 'precision': 0.49090909090909096, 'fpr': 0.101010101010101, 'tpr': 0.4545454545454546, 'pr_auc': 0.6803030303030303, 'roc_auc': 0.6767676767676768}, {'fold_num': 4, 'train_time': 3.9744842052459717, 'infer_time': 0.20406462929465552, 'best_params': {'estimator__model__learning_rate': 0.13569084963936826, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 201, 'estimator__model__num_leaves': 41, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 12.644452672673154}, 'accuracy': 0.5833333333333334, 'precision': 0.6666666666666666, 'fpr': 0.0808080808080808, 'tpr': 0.5454545454545454, 'pr_auc': 0.6623376623376623, 'roc_auc': 0.7323232323232324}, {'fold_num': 5, 'train_time': 3.9562652111053467, 'infer_time': 0.20319765264337714, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.6666666666666666, 'precision': 0.6363636363636364, 'fpr': 0.05858585858585859, 'tpr': 0.6363636363636364, 'pr_auc': 0.7575757575757577, 'roc_auc': 0.788888888888889}, {'fold_num': 6, 'train_time': 4.0345776081085205, 'infer_time': 0.1979741183194247, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.6666666666666666, 'precision': 0.6666666666666666, 'fpr': 0.05656565656565657, 'tpr': 0.6363636363636364, 'pr_auc': 0.7696969696969698, 'roc_auc': 0.78989898989899}, {'fold_num': 7, 'train_time': 3.891026020050049, 'infer_time': 0.25801658630371094, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.6666666666666666, 'precision': 0.7, 'fpr': 0.06944444444444445, 'tpr': 0.6, 'pr_auc': 0.7833333333333332, 'roc_auc': 0.7652777777777777}, {'fold_num': 8, 'train_time': 3.9945547580718994, 'infer_time': 0.22077560424804688, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.6666666666666666, 'precision': 0.78, 'fpr': 0.07500000000000001, 'tpr': 0.6, 'pr_auc': 0.79, 'roc_auc': 0.7625}, {'fold_num': 9, 'train_time': 3.9341559410095215, 'infer_time': 0.21800994873046875, 'best_params': {'estimator__model__learning_rate': 0.1775605554273027, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 244, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 40.429157365715476}, 'accuracy': 0.5833333333333334, 'precision': 0.5166666666666666, 'fpr': 0.08333333333333333, 'tpr': 0.55, 'pr_auc': 0.7452380952380953, 'roc_auc': 0.7333333333333334}, {'fold_num': 10, 'train_time': 3.95881986618042, 'infer_time': 0.22304058074951172, 'best_params': {'estimator__model__learning_rate': 0.1775605554273027, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 244, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 40.429157365715476}, 'accuracy': 0.5833333333333334, 'precision': 0.5333333333333333, 'fpr': 0.09722222222222221, 'tpr': 0.5, 'pr_auc': 0.615, 'roc_auc': 0.7013888888888888}]}, 'teachingAssistant.csv': {'RBoost': [{'fold_num': 1, 'train_time': 36.543434858322144, 'infer_time': 0.2788752317428589, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.022075055187637967, 'estimator__model__T': 5}, 'accuracy': 0.16666666666666666, 'precision': 0.08653846153846154, 'fpr': 0.4602272727272727, 'tpr': 0.1875, 'pr_auc': 0.3584735576923077, 'roc_auc': 0.36363636363636365}, {'fold_num': 2, 'train_time': 37.32004356384277, 'infer_time': 0.4813671112060547, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.022075055187637967, 'estimator__model__T': 10}, 'accuracy': 0.41111111111111115, 'precision': 0.34848484848484845, 'fpr': 0.3333333333333333, 'tpr': 0.4666666666666667, 'pr_auc': 0.45625485625485623, 'roc_auc': 0.5666666666666667}, {'fold_num': 3, 'train_time': 37.032594203948975, 'infer_time': 0.28217633565266925, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 100, 'estimator__model__kappa': 0.014716703458425313, 'estimator__model__T': 5}, 'accuracy': 0.3333333333333333, 'precision': 0.1111111111111111, 'fpr': 0.3333333333333333, 'tpr': 0.3333333333333333, 'pr_auc': 0.3388888888888889, 'roc_auc': 0.5}, {'fold_num': 4, 'train_time': 36.284433126449585, 'infer_time': 0.20503997802734375, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 20, 'estimator__model__kappa': 0.014716703458425313, 'estimator__model__T': 3}, 'accuracy': 0.26666666666666666, 'precision': 0.09523809523809522, 'fpr': 0.36666666666666664, 'tpr': 0.26666666666666666, 'pr_auc': 0.3937950937950938, 'roc_auc': 0.44999999999999996}, {'fold_num': 5, 'train_time': 36.588858127593994, 'infer_time': 0.2899169921875, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.022075055187637967, 'estimator__model__T': 5}, 'accuracy': 0.4000000000000001, 'precision': 0.2878787878787879, 'fpr': 0.3, 'tpr': 0.4, 'pr_auc': 0.38484848484848483, 'roc_auc': 0.55}, {'fold_num': 6, 'train_time': 37.782811641693115, 'infer_time': 0.5023638407389323, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.022075055187637967, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.20454545454545456, 'fpr': 0.3333333333333333, 'tpr': 0.3333333333333333, 'pr_auc': 0.3016705516705517, 'roc_auc': 0.49999999999999994}, {'fold_num': 7, 'train_time': 37.58718490600586, 'infer_time': 0.4962444305419922, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.3333333333333333, 'estimator__model__T': 10}, 'accuracy': 0.4666666666666666, 'precision': 0.3333333333333333, 'fpr': 0.26666666666666666, 'tpr': 0.4666666666666667, 'pr_auc': 0.41188034188034184, 'roc_auc': 0.6000000000000001}, {'fold_num': 8, 'train_time': 37.92461705207825, 'infer_time': 0.48640569051106775, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.007358351729212656, 'estimator__model__T': 10}, 'accuracy': 0.39999999999999997, 'precision': 0.2948717948717949, 'fpr': 0.3, 'tpr': 0.39999999999999997, 'pr_auc': 0.3511111111111111, 'roc_auc': 0.5499999999999999}, {'fold_num': 9, 'train_time': 37.75008487701416, 'infer_time': 0.4852453867594401, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.014716703458425313, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.1111111111111111, 'fpr': 0.3333333333333333, 'tpr': 0.3333333333333333, 'pr_auc': 0.3388888888888889, 'roc_auc': 0.5}, {'fold_num': 10, 'train_time': 37.64646673202515, 'infer_time': 0.4882335662841797, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.007358351729212656, 'estimator__model__T': 10}, 'accuracy': 0.26666666666666666, 'precision': 0.09523809523809522, 'fpr': 0.36666666666666664, 'tpr': 0.26666666666666666, 'pr_auc': 0.46757575757575753, 'roc_auc': 0.44999999999999996}], 'LGBoost': [{'fold_num': 1, 'train_time': 2.3913183212280273, 'infer_time': 0.09244680404663086, 'best_params': {'estimator__model__learning_rate': 0.25556761107561105, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 310, 'estimator__model__num_leaves': 39, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 38.07594181338125}, 'accuracy': 0.7555555555555555, 'precision': 0.7575892857142857, 'fpr': 0.12272727272727274, 'tpr': 0.75, 'pr_auc': 0.4613185425685426, 'roc_auc': 0.8136363636363636}, {'fold_num': 2, 'train_time': 2.2892160415649414, 'infer_time': 0.08730888366699219, 'best_params': {'estimator__model__learning_rate': 0.1257563696803999, 'estimator__model__max_depth': 17, 'estimator__model__n_estimators': 148, 'estimator__model__num_leaves': 41, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 9.566126547686462}, 'accuracy': 0.6, 'precision': 0.6288888888888889, 'fpr': 0.18383838383838383, 'tpr': 0.6, 'pr_auc': 0.5084223184223184, 'roc_auc': 0.7080808080808081}, {'fold_num': 3, 'train_time': 2.354846954345703, 'infer_time': 0.08896191914876302, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.8000000000000002, 'precision': 0.8222222222222222, 'fpr': 0.1, 'tpr': 0.8, 'pr_auc': 0.43643523143523144, 'roc_auc': 0.85}, {'fold_num': 4, 'train_time': 2.3565902709960938, 'infer_time': 0.08870760599772136, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.7333333333333334, 'precision': 0.7388888888888888, 'fpr': 0.13333333333333333, 'tpr': 0.7333333333333334, 'pr_auc': 0.4868427868427868, 'roc_auc': 0.7999999999999999}, {'fold_num': 5, 'train_time': 2.366990089416504, 'infer_time': 0.09660720825195312, 'best_params': {'estimator__model__learning_rate': 0.25556761107561105, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 310, 'estimator__model__num_leaves': 39, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 38.07594181338125}, 'accuracy': 0.6666666666666666, 'precision': 0.6555555555555554, 'fpr': 0.16666666666666669, 'tpr': 0.6666666666666666, 'pr_auc': 0.5253268953268954, 'roc_auc': 0.75}, {'fold_num': 6, 'train_time': 2.3843514919281006, 'infer_time': 0.09007453918457031, 'best_params': {'estimator__model__learning_rate': 0.1580341587319542, 'estimator__model__max_depth': 13, 'estimator__model__n_estimators': 231, 'estimator__model__num_leaves': 27, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 25.00021143575623}, 'accuracy': 0.4000000000000001, 'precision': 0.45079365079365075, 'fpr': 0.3, 'tpr': 0.4, 'pr_auc': 0.5474410774410774, 'roc_auc': 0.5499999999999999}, {'fold_num': 7, 'train_time': 2.357652425765991, 'infer_time': 0.09174346923828125, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.4666666666666666, 'precision': 0.45, 'fpr': 0.26666666666666666, 'tpr': 0.4666666666666667, 'pr_auc': 0.30626984126984125, 'roc_auc': 0.6}, {'fold_num': 8, 'train_time': 2.311819314956665, 'infer_time': 0.09086926778157552, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.5333333333333333, 'precision': 0.5333333333333333, 'fpr': 0.23333333333333334, 'tpr': 0.5333333333333333, 'pr_auc': 0.3484199134199134, 'roc_auc': 0.6500000000000001}, {'fold_num': 9, 'train_time': 2.3635666370391846, 'infer_time': 0.0885009765625, 'best_params': {'estimator__model__learning_rate': 0.21354175955467047, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 220, 'estimator__model__num_leaves': 18, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 8.624629167005763}, 'accuracy': 0.26666666666666666, 'precision': 0.24444444444444444, 'fpr': 0.36666666666666664, 'tpr': 0.26666666666666666, 'pr_auc': 0.36301587301587296, 'roc_auc': 0.44999999999999996}, {'fold_num': 10, 'train_time': 2.280468225479126, 'infer_time': 0.08343060811360677, 'best_params': {'estimator__model__learning_rate': 0.1257563696803999, 'estimator__model__max_depth': 17, 'estimator__model__n_estimators': 148, 'estimator__model__num_leaves': 41, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 9.566126547686462}, 'accuracy': 0.5333333333333333, 'precision': 0.5555555555555555, 'fpr': 0.23333333333333334, 'tpr': 0.5333333333333333, 'pr_auc': 0.44684278684278683, 'roc_auc': 0.6499999999999999}]}, 'spect.csv': {'RBoost': [{'fold_num': 1, 'train_time': 16.490838050842285, 'infer_time': 0.15286163047507959, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.3333333333333333, 'estimator__model__T': 10}, 'accuracy': 0.5710227272727273, 'precision': 0.5871459694989107, 'fpr': 0.3125, 'tpr': 0.45454545454545453, 'pr_auc': 0.6695286195286195, 'roc_auc': 0.5710227272727273}, {'fold_num': 2, 'train_time': 16.57385230064392, 'infer_time': 0.14900278162073205, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 100, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 10}, 'accuracy': 0.5909090909090909, 'precision': 0.7866666666666667, 'fpr': 0.0, 'tpr': 0.18181818181818182, 'pr_auc': 0.6516446516446516, 'roc_auc': 0.5909090909090909}, {'fold_num': 3, 'train_time': 15.784003019332886, 'infer_time': 0.07586125974301938, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 3}, 'accuracy': 0.5, 'precision': 0.3511659807956104, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4074074074074074, 'roc_auc': 0.5}, {'fold_num': 4, 'train_time': 16.02861785888672, 'infer_time': 0.0763204362657335, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 3}, 'accuracy': 0.5, 'precision': 0.3511659807956104, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4074074074074074, 'roc_auc': 0.5}, {'fold_num': 5, 'train_time': 16.53256893157959, 'infer_time': 0.15041563245985243, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 100, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 10}, 'accuracy': 0.5, 'precision': 0.3511659807956104, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4074074074074074, 'roc_auc': 0.5}, {'fold_num': 6, 'train_time': 16.65008783340454, 'infer_time': 0.15535721412071815, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.012578616352201259, 'estimator__model__T': 10}, 'accuracy': 0.5, 'precision': 0.3328402366863905, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.45833333333333326, 'roc_auc': 0.5}, {'fold_num': 7, 'train_time': 16.211724758148193, 'infer_time': 0.1040788797231821, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.012578616352201259, 'estimator__model__T': 5}, 'accuracy': 0.5, 'precision': 0.3328402366863905, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4230769230769231, 'roc_auc': 0.5}, {'fold_num': 8, 'train_time': 16.595489025115967, 'infer_time': 0.15377081357515776, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 100, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 10}, 'accuracy': 0.5, 'precision': 0.3328402366863905, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4230769230769231, 'roc_auc': 0.5}, {'fold_num': 9, 'train_time': 16.626737356185913, 'infer_time': 0.15657681685227615, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 100, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 10}, 'accuracy': 0.5, 'precision': 0.3328402366863905, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4230769230769231, 'roc_auc': 0.5}, {'fold_num': 10, 'train_time': 16.237371683120728, 'infer_time': 0.07767860706035908, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.008385744234800839, 'estimator__model__T': 3}, 'accuracy': 0.5, 'precision': 0.3328402366863905, 'fpr': 0.0, 'tpr': 0.0, 'pr_auc': 0.4230769230769231, 'roc_auc': 0.5}], 'LGBoost': [{'fold_num': 1, 'train_time': 1.2100002765655518, 'infer_time': 0.04393083077889902, 'best_params': {'estimator__model__learning_rate': 0.25556761107561105, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 310, 'estimator__model__num_leaves': 39, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 38.07594181338125}, 'accuracy': 0.6306818181818181, 'precision': 0.6426536426536426, 'fpr': 0.375, 'tpr': 0.6363636363636364, 'pr_auc': 0.6512752844303648, 'roc_auc': 0.6306818181818181}, {'fold_num': 2, 'train_time': 1.2278358936309814, 'infer_time': 0.043453993620695894, 'best_params': {'estimator__model__learning_rate': 0.1775605554273027, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 244, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 40.429157365715476}, 'accuracy': 0.6647727272727273, 'precision': 0.7058201058201058, 'fpr': 0.125, 'tpr': 0.45454545454545453, 'pr_auc': 0.6818833340572472, 'roc_auc': 0.6647727272727273}, {'fold_num': 3, 'train_time': 1.2075247764587402, 'infer_time': 0.039612805401837384, 'best_params': {'estimator__model__learning_rate': 0.016381150996555183, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 168, 'estimator__model__num_leaves': 13, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 5.149250290637646}, 'accuracy': 0.6818181818181819, 'precision': 0.8196457326892109, 'fpr': 0.0, 'tpr': 0.36363636363636365, 'pr_auc': 0.7713822372913283, 'roc_auc': 0.6818181818181819}, {'fold_num': 4, 'train_time': 1.2014877796173096, 'infer_time': 0.04713623612015336, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.8465909090909092, 'precision': 0.8518518518518519, 'fpr': 0.125, 'tpr': 0.8181818181818182, 'pr_auc': 0.7603830512921421, 'roc_auc': 0.8465909090909092}, {'fold_num': 5, 'train_time': 1.2022874355316162, 'infer_time': 0.04610308894404659, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.5397727272727273, 'precision': 0.5555555555555556, 'fpr': 0.375, 'tpr': 0.45454545454545453, 'pr_auc': 0.5564602064602064, 'roc_auc': 0.5397727272727273}, {'fold_num': 6, 'train_time': 1.2363483905792236, 'infer_time': 0.04506111145019531, 'best_params': {'estimator__model__learning_rate': 0.1775605554273027, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 244, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 40.429157365715476}, 'accuracy': 0.6303030303030304, 'precision': 0.6452214452214453, 'fpr': 0.4666666666666667, 'tpr': 0.7272727272727273, 'pr_auc': 0.7440652707363937, 'roc_auc': 0.6303030303030303}, {'fold_num': 7, 'train_time': 1.232776403427124, 'infer_time': 0.04765620598426232, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.7636363636363637, 'precision': 0.7692307692307693, 'fpr': 0.2, 'tpr': 0.7272727272727273, 'pr_auc': 0.8581818181818182, 'roc_auc': 0.7636363636363637}, {'fold_num': 8, 'train_time': 1.2399191856384277, 'infer_time': 0.045592968280498795, 'best_params': {'estimator__model__learning_rate': 0.25556761107561105, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 310, 'estimator__model__num_leaves': 39, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 38.07594181338125}, 'accuracy': 0.6606060606060606, 'precision': 0.6969346443030654, 'fpr': 0.13333333333333333, 'tpr': 0.45454545454545453, 'pr_auc': 0.7501677389494176, 'roc_auc': 0.6606060606060606}, {'fold_num': 9, 'train_time': 1.1570653915405273, 'infer_time': 0.03999013167161208, 'best_params': {'estimator__model__learning_rate': 0.016381150996555183, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 168, 'estimator__model__num_leaves': 13, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 5.149250290637646}, 'accuracy': 0.6181818181818182, 'precision': 0.6272189349112426, 'fpr': 0.4, 'tpr': 0.6363636363636364, 'pr_auc': 0.5389398925495181, 'roc_auc': 0.6181818181818183}, {'fold_num': 10, 'train_time': 1.2297139167785645, 'infer_time': 0.04595059614915114, 'best_params': {'estimator__model__learning_rate': 0.016381150996555183, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 168, 'estimator__model__num_leaves': 13, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 5.149250290637646}, 'accuracy': 0.8424242424242425, 'precision': 0.8461538461538461, 'fpr': 0.13333333333333333, 'tpr': 0.8181818181818181, 'pr_auc': 0.8745050404141314, 'roc_auc': 0.8424242424242424}]}, 'waveform-noise.csv': {'RBoost': [{'fold_num': 1, 'train_time': 3981.538332223892, 'infer_time': 0.1681985855102539, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.3333333333333333, 'estimator__model__T': 5}, 'accuracy': 0.3333333333333333, 'precision': 0.11044488977955912, 'fpr': 0.33797309857896146, 'tpr': 0.338, 'pr_auc': 0.3346307284445661, 'roc_auc': 0.5000134507105193}, {'fold_num': 2, 'train_time': 3989.4519464969635, 'infer_time': 0.18825244903564453, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.00022222222222222223, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.110224, 'fpr': 0.338, 'tpr': 0.338, 'pr_auc': 0.33331600000000006, 'roc_auc': 0.5}, {'fold_num': 3, 'train_time': 3993.8727085590363, 'infer_time': 0.13369464874267578, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.0006666666666666666, 'estimator__model__T': 5}, 'accuracy': 0.3333333333333333, 'precision': 0.110224, 'fpr': 0.332, 'tpr': 0.332, 'pr_auc': 0.33336800000000005, 'roc_auc': 0.5}, {'fold_num': 4, 'train_time': 3955.59547829628, 'infer_time': 0.2573261260986328, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.0006666666666666666, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.110224, 'fpr': 0.33, 'tpr': 0.33, 'pr_auc': 0.3331498759944131, 'roc_auc': 0.5}, {'fold_num': 5, 'train_time': 3973.907277584076, 'infer_time': 0.10794353485107422, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.0006666666666666666, 'estimator__model__T': 5}, 'accuracy': 0.3333333333333333, 'precision': 0.110224, 'fpr': 0.33, 'tpr': 0.33, 'pr_auc': 0.33514045681724897, 'roc_auc': 0.5}, {'fold_num': 6, 'train_time': 4021.8810408115387, 'infer_time': 0.2396073341369629, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.3333333333333333, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.10890000000000001, 'fpr': 0.33, 'tpr': 0.33, 'pr_auc': 0.33340000000000003, 'roc_auc': 0.5}, {'fold_num': 7, 'train_time': 3987.3003895282745, 'infer_time': 0.11099624633789062, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 100, 'estimator__model__kappa': 0.00044444444444444447, 'estimator__model__T': 5}, 'accuracy': 0.3333333333333333, 'precision': 0.1091182364729459, 'fpr': 0.32999999999999996, 'tpr': 0.33, 'pr_auc': 0.3335126150893336, 'roc_auc': 0.5}, {'fold_num': 8, 'train_time': 3930.0676684379578, 'infer_time': 0.2098398208618164, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 1, 'estimator__model__kappa': 0.00044444444444444447, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.10890000000000001, 'fpr': 0.33, 'tpr': 0.33, 'pr_auc': 0.33336800000000005, 'roc_auc': 0.5}, {'fold_num': 9, 'train_time': 3927.2759549617767, 'infer_time': 0.27666759490966797, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 10, 'estimator__model__kappa': 0.0006666666666666666, 'estimator__model__T': 10}, 'accuracy': 0.3333333333333333, 'precision': 0.10890000000000001, 'fpr': 0.33, 'tpr': 0.33, 'pr_auc': 0.33512176352705414, 'roc_auc': 0.5}, {'fold_num': 10, 'train_time': 3960.902359724045, 'infer_time': 0.059010982513427734, 'best_params': {'estimator__model__verbose': False, 'estimator__model__silent': True, 'estimator__model__reg': 50, 'estimator__model__kappa': 0.00044444444444444447, 'estimator__model__T': 3}, 'accuracy': 0.3313131313131313, 'precision': 0.10845691382765531, 'fpr': 0.3329969788519638, 'tpr': 0.3299878787878788, 'pr_auc': 0.33309645715673775, 'roc_auc': 0.4984954499679575}], 'LGBoost': [{'fold_num': 1, 'train_time': 60.283557415008545, 'infer_time': 0.024576663970947266, 'best_params': {'estimator__model__learning_rate': 0.1775605554273027, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 244, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 40.429157365715476}, 'accuracy': 0.868213251067746, 'precision': 0.8691762651684907, 'fpr': 0.06612705886418982, 'tpr': 0.8681995437370784, 'pr_auc': 0.2322691663475908, 'roc_auc': 0.9010362424364442}, {'fold_num': 2, 'train_time': 61.57355713844299, 'infer_time': 0.030711650848388672, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.8478799544601213, 'precision': 0.8492213270475654, 'fpr': 0.07606850367443857, 'tpr': 0.8479772775880283, 'pr_auc': 0.4678958732697206, 'roc_auc': 0.8859543869567951}, {'fold_num': 3, 'train_time': 60.12679839134216, 'infer_time': 0.021329402923583984, 'best_params': {'estimator__model__learning_rate': 0.05630456468833846, 'estimator__model__max_depth': 15, 'estimator__model__n_estimators': 216, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 30.724815832695242}, 'accuracy': 0.8482737836769347, 'precision': 0.8480839634399668, 'fpr': 0.07597274189502584, 'tpr': 0.8480000000000001, 'pr_auc': 0.46481590947588414, 'roc_auc': 0.8860136290524872}, {'fold_num': 4, 'train_time': 61.19585967063904, 'infer_time': 0.0317835807800293, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.8525758763942267, 'precision': 0.8549037552013012, 'fpr': 0.07380052571053952, 'tpr': 0.8519020810514786, 'pr_auc': 0.9426069129663099, 'roc_auc': 0.8890507776704697}, {'fold_num': 5, 'train_time': 61.92085313796997, 'infer_time': 0.04027891159057617, 'best_params': {'estimator__model__learning_rate': 0.25556761107561105, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 310, 'estimator__model__num_leaves': 39, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 38.07594181338125}, 'accuracy': 0.858339148237202, 'precision': 0.8605416605226242, 'fpr': 0.07069802084967461, 'tpr': 0.8580106608251188, 'pr_auc': 0.933937682738168, 'roc_auc': 0.8936563199877221}, {'fold_num': 6, 'train_time': 60.37771010398865, 'infer_time': 0.027109146118164062, 'best_params': {'estimator__model__learning_rate': 0.1580341587319542, 'estimator__model__max_depth': 13, 'estimator__model__n_estimators': 231, 'estimator__model__num_leaves': 27, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 25.00021143575623}, 'accuracy': 0.8405228758169935, 'precision': 0.8405578202102553, 'fpr': 0.07989145183175034, 'tpr': 0.8400000000000001, 'pr_auc': 0.9302673845789523, 'roc_auc': 0.8800542740841248}, {'fold_num': 7, 'train_time': 60.0425820350647, 'infer_time': 0.029697895050048828, 'best_params': {'estimator__model__learning_rate': 0.08771790309879973, 'estimator__model__max_depth': 7, 'estimator__model__n_estimators': 248, 'estimator__model__num_leaves': 38, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 39.73080413472752}, 'accuracy': 0.8743909685086155, 'precision': 0.875142402555047, 'fpr': 0.06273812754409769, 'tpr': 0.8740000000000001, 'pr_auc': 0.9508368960730205, 'roc_auc': 0.9056309362279513}, {'fold_num': 8, 'train_time': 60.400025367736816, 'infer_time': 0.025008678436279297, 'best_params': {'estimator__model__learning_rate': 0.13569084963936826, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 201, 'estimator__model__num_leaves': 41, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 12.644452672673154}, 'accuracy': 0.8882109755140339, 'precision': 0.888107736078314, 'fpr': 0.056001184806290384, 'tpr': 0.8880000000000001, 'pr_auc': 0.9562351688455013, 'roc_auc': 0.9159994075968549}, {'fold_num': 9, 'train_time': 60.13922572135925, 'infer_time': 0.024928569793701172, 'best_params': {'estimator__model__learning_rate': 0.13569084963936826, 'estimator__model__max_depth': 10, 'estimator__model__n_estimators': 201, 'estimator__model__num_leaves': 41, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 12.644452672673154}, 'accuracy': 0.8623917221692942, 'precision': 0.8618242647058824, 'fpr': 0.06905545476661773, 'tpr': 0.8623770585299779, 'pr_auc': 0.4712111471925921, 'roc_auc': 0.8966608018816802}, {'fold_num': 10, 'train_time': 59.7757830619812, 'infer_time': 0.02499532699584961, 'best_params': {'estimator__model__learning_rate': 0.1775605554273027, 'estimator__model__max_depth': 14, 'estimator__model__n_estimators': 244, 'estimator__model__num_leaves': 20, 'estimator__model__objective': 'binary', 'estimator__model__reg_lambda': 40.429157365715476}, 'accuracy': 0.8482494438935588, 'precision': 0.8484129483359368, 'fpr': 0.07608662991463078, 'tpr': 0.8486325208310379, 'pr_auc': 0.22615537543884606, 'roc_auc': 0.8862729454582037}]}}
+Done writing results in part 1
