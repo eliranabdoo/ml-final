@@ -7,10 +7,14 @@ To tune the hyperparameter of the compared model (RBoost or EPLBoost) see the ma
 
 model_params = {
             'estimator__model__kappa': The capping constant for the samples weights
+            
             'estimator__model__T': The number of weak learners
+            
             'estimator__model__reg': The regularization parameter that scales the riemennian distance between the samples distribution and
                 the initial samples distribution (uniform)
+                
             'estimator__model__silent': Silents any output
+            
             'estimator__model__verbose': Verbose mode flag
 
 Switch between RBoost and EPLBoost using the USE_RBOOST flag in constant.py
