@@ -3,3 +3,10 @@ dermatology.csv: Input contains NaN, infinity or a value too large for dtype('fl
 energy-y2.csv: Input contains NaN, infinity or a value too large for dtype('float64').
 yeast.csv: Input contains NaN, infinity or a value too large for dtype('float64').
 steel-plates.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+analcatdata_boxing1.csv: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+analcatdata_broadwaymult.csv: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+conn-bench-vowel-deterding.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+arrhythmia.csv: probabilities contain NaN
+statlog-vehicle.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+semeion.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+mfeat-karhunen.csv: probabilities contain NaN
