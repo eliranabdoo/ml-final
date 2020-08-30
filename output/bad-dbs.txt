@@ -1,0 +1,4 @@
+flags.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+vertebral-column-3clases.csv: Input contains NaN, infinity or a value too large for dtype('float64').
+analcatdata_germangss.csv: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all().
+synthetic-control.csv: Input contains NaN, infinity or a value too large for dtype('float64').
