@@ -123,14 +123,6 @@ def main():
                     X_train = preprocessing.transform(X_train)
                     X_test = preprocessing.transform(X_test)
 
-                    model_params = {
-                        'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
-                        'estimator__model__T': [3, 5, 10],
-                        'estimator__model__reg': [1, 10, 20, 50, 100],
-                        'estimator__model__silent': [True],
-                        'estimator__model__verbose': [False]
-                    }
-
                     # --- random search --- #
                     cv = RandomizedSearchCV(estimator=ova_model, param_distributions=model_params,
                                             scoring=make_scorer(eval_metric), cv=HPT_FOLDS,

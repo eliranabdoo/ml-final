@@ -24,6 +24,7 @@ STAT_CHOSEN_METRIC = 'accuracy'
 WEIGHTED_METRICS = True
 WORKING_DIR = "./output"
 RESULTS_DIR = WORKING_DIR
+USE_EXISTING_RESULTS = False
 
 EVAL_FOLDS = 10
 HPT_FOLDS = 3
@@ -49,6 +50,17 @@ SHAP_DIR = 'shap'
 
 PLOT_TOP_FEATURES = 10
 
+
+# Our Model Hyper-Params
+model_params = {
+    'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
+    'estimator__model__T': [3, 5, 10],
+    'estimator__model__reg': [1, 10, 20, 50, 100],
+    'estimator__model__silent': [True],
+    'estimator__model__verbose': [False]
+}
+
+# Comp Model Hyper-Params
 params_ranges = {
     "model__n_estimators": (5, 10000),
     "model__learning_rate": (1e-10, 1),
