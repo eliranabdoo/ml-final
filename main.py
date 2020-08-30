@@ -1,6 +1,6 @@
 import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
 import sys
-#os.system("python -m pip install xgboost==1.0.0")
+# os.system("python -m pip install xgboost==1.0.0")
 import xgboost as xgb
 from sklearn.impute import SimpleImputer
 from sklearn.feature_selection import VarianceThreshold
@@ -13,7 +13,7 @@ import lightgbm as lgb
 from sklearn.multiclass import OneVsRestClassifier
 from datetime import datetime
 from scipy.stats import friedmanchisquare
-#os.system("python -m pip install scikit_posthocs")
+# os.system("python -m pip install scikit_posthocs")
 from scikit_posthocs import posthoc_nemenyi_friedman
 import dill
 import os
@@ -27,6 +27,8 @@ from metrics_utilities import *
 
 
 def db_encode(db_name, X, y):
+    """Performs fixed replacements of values to handle db-specific value anomalies
+    """
     if y.dtype == np.object:
         y = y.replace(y_values_encoding)
     if db_name in X_nan_values:
@@ -53,20 +55,16 @@ def main():
 
     raw_dbs = sorted(raw_dbs, key=lambda x: len(x[1]))  # sort by db length
 
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 1:  # For distributed training of multiple dbs over multiple servers
         num_parts = int(sys.argv[1])
         curr_part = int(sys.argv[2])
         assert curr_part <= num_parts
         assert curr_part >= 1
 
         PART_NUMBER = curr_part
-        part_size = int(np.ceil(len(raw_dbs) / num_parts))
 
-        #lower_idx, upper_idx = (curr_part - 1) * part_size, min(curr_part * part_size, len(raw_dbs) -1)
-        #print("Working on dbs %d to %d" % (lower_idx, upper_idx))
-        #raw_dbs = raw_dbs[lower_idx:upper_idx]
-        print("working on dbs %s" % str(list(range(curr_part-1, len(raw_dbs), num_parts))))
-        raw_dbs = [raw_dbs[i] for i in range(curr_part-1, len(raw_dbs), num_parts)]
+        print("working on dbs %s" % str(list(range(curr_part - 1, len(raw_dbs), num_parts))))
+        raw_dbs = [raw_dbs[i] for i in range(curr_part - 1, len(raw_dbs), num_parts)]
 
     preprocessing = DelayedColumnTransformer([
         (np.object, [SimpleImputer(strategy='constant'), OneHotEncoder(handle_unknown='ignore')]),
@@ -105,19 +103,20 @@ def main():
         try:
             for train_index, test_index in kf.split(X, y):
                 print("{}:{}:Fold_{}".format(datetime.now(), db_name, fold_num))
-                # --- get fold and preprocess ---
+                # --- get fold and preprocess --- #
                 X_train, X_test = X.iloc[train_index], X.iloc[test_index]
                 y_train, y_test = y[train_index], y[test_index]
 
                 invalid_labels = set(y_test.unique()) - set(y_train.unique())
-                if len(invalid_labels) > 0:  # Introduce new labels, should occur only for outliers due to StratifiedKFold
+                # Introduce new labels, should occur only for outliers due to StratifiedKFold
+                # Main assumption in classification is that all labels are known upfront
+                if len(invalid_labels) > 0:
                     X_train = pd.concat([X_train, pd.DataFrame(
                         [[np.nan for _ in range(len(X_train.columns))] for _ in range(len(invalid_labels))],
                         columns=X_train.columns)], ignore_index=True)
                     y_train = y_train.append(pd.Series(list(invalid_labels)), ignore_index=True)
                     X_train, y_train = db_encode(db_name, X_train, y_train)
 
-                # print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
                 preprocessing.fit(X_train, y_train)
                 X_train = preprocessing.transform(X_train)
                 X_test = preprocessing.transform(X_test)
@@ -130,7 +129,7 @@ def main():
                     'estimator__model__verbose': [False]
                 }
 
-                # --- random search ---
+                # --- random search --- #
                 cv = RandomizedSearchCV(estimator=ova_model, param_distributions=model_params,
                                         scoring=make_scorer(eval_metric), cv=HPT_FOLDS,
                                         n_iter=RANDOM_CV_ITER, random_state=RANDOM_SEED)
@@ -142,31 +141,31 @@ def main():
                 curr_fold_comp_results = {'fold_num': fold_num}
 
                 # --- measure times - FIT + INFER --- #
-                print("training our model")
-                curr_fold_results['train_time'], curr_fold_results['infer_time'] = get_time_metrics(cv, X_train, y_train,
+                print("Training our model")
+                curr_fold_results['train_time'], curr_fold_results['infer_time'] = get_time_metrics(cv, X_train,
+                                                                                                    y_train,
                                                                                                     X_test)
                 print("Finished training our model")
-                print("training comparison model")
+                print("Training comparison model")
                 curr_fold_comp_results['train_time'], curr_fold_comp_results['infer_time'] = get_time_metrics(comp_cv,
                                                                                                               X_train,
                                                                                                               y_train,
                                                                                                               X_test)
                 print("Finished training comparison model")
 
-                # --- save trained models ---
+                # --- save trained models --- #
                 model_path = MODELS_DIR + "/model_fold_" + str(fold_num) + "_db_name_" + db_name
                 comp_model_path = MODELS_DIR + "/comp_model_fold_" + str(fold_num) + "_db_name_" + db_name
                 dill.dump(cv.best_estimator_, open(model_path, 'wb'))
                 dill.dump(comp_cv.best_estimator_, open(comp_model_path, 'wb'))
 
-                # --- register best params ---
+                # --- register best params --- #
                 best_comp_params = comp_cv.best_params_
                 best_params = cv.best_params_
                 curr_fold_comp_results['best_params'] = best_comp_params
                 curr_fold_results['best_params'] = best_params
                 # --- get predictions for MultiRBoost --- #
                 y_test_pred_per_label_scores = cv.predict_proba(X_test)
-                y_test_pred_per_label_scores[np.isnan(y_test_pred_per_label_scores)] = 1.0/y_test_pred_per_label_scores.shape[1]  # nan refers to 1.0 for each binary
                 y_test_pred = cv.predict(X_test)
 
                 train_labels = cv.best_estimator_.classes_
@@ -174,10 +173,18 @@ def main():
 
                 # --- get predictions for LightGBM --- #
                 y_test_pred_comp_per_label_scores = comp_cv.predict_proba(X_test)
-                y_test_pred_comp_per_label_scores[np.isnan(y_test_pred_comp_per_label_scores)] = 1.0/y_test_pred_comp_per_label_scores.shape[1]  # nan refers to 1.0 for each binary
                 y_test_pred_comp = comp_cv.predict(X_test)
 
-                # metrics applicable in multiclass setting ---percision--- #
+                # --- replace nans with uniform - fixes an error in OneVsRest --- #
+                y_test_pred_comp_per_label_scores[np.isnan(y_test_pred_comp_per_label_scores)] = 1.0 / \
+                                                                                                 y_test_pred_comp_per_label_scores.shape[
+                                                                                                     1]
+
+                y_test_pred_per_label_scores[np.isnan(y_test_pred_per_label_scores)] = 1.0 / \
+                                                                                       y_test_pred_per_label_scores.shape[
+                                                                                           1]
+
+                # metrics applicable in multiclass setting ---accuracy, precision--- #
                 multiclass_metrics_dict = {0: 'accuracy', 1: 'precision'}
 
                 multiclass_metrics = get_multiclass_metrics(y_test, y_test_pred)
@@ -222,8 +229,9 @@ def main():
     write_all_results(dbs_results, PART_NUMBER)
 
     print("Done writing results in part %d" % PART_NUMBER)
-    sys.exit(1)
 
+    # --- Statistical Tests Section --- #
+    # --- Friedman Test --- #
     models_measures = np.zeros(shape=(len(dbs_results), 2))
 
     for model_idx, model_name in enumerate(MODELS_LIST):
@@ -244,7 +252,7 @@ def main():
     else:
         print("Not statistically significant!")
 
-
+    # --- Meta Learning Section --- #
     per_dataset_winner = {}
     for db_name in dbs_results:
         our_model_metrics = dbs_results[db_name][OUR_MODEL]
@@ -281,6 +289,7 @@ def main():
     y_pred = pd.Series([meta_model_results[db_name] for db_name in meta_model_results])
 
     print("Meta Model Accuracy: %f" % accuracy_score(y, y_pred))
+
 
 if __name__ == "__main__":
     main()
