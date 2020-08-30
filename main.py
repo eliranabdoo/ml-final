@@ -94,7 +94,14 @@ def main():
             X, y = db_encode(db_name, X, y)
 
             N = len(X) * (1 - (1 / EVAL_FOLDS))
-
+            # Our Model Hyper-Params
+            model_params = {
+                'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
+                'estimator__model__T': [3, 5, 10],
+                'estimator__model__reg': [1, 10, 20, 50, 100],
+                'estimator__model__silent': [True],
+                'estimator__model__verbose': [False]
+            }
             fold_num = 1
 
             # list of results per fold
@@ -122,6 +129,9 @@ def main():
                     preprocessing.fit(X_train, y_train)
                     X_train = preprocessing.transform(X_train)
                     X_test = preprocessing.transform(X_test)
+
+
+                    
 
                     # --- random search --- #
                     cv = RandomizedSearchCV(estimator=ova_model, param_distributions=model_params,
