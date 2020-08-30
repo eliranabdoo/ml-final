@@ -23,12 +23,10 @@ STAT_CHOSEN_METRIC = 'accuracy'
 
 WEIGHTED_METRICS = True
 WORKING_DIR = "./output"
-RESULTS_DIR = WORKING_DIR
-USE_EXISTING_RESULTS = False
 
 EVAL_FOLDS = 10
 HPT_FOLDS = 3
-RANDOM_CV_ITER = 10
+RANDOM_CV_ITER = 50
 
 RESULTS_CSV_PATH = os.path.join(WORKING_DIR, "results.csv")
 RESULT_CSV_PATH = lambda db_name: os.path.join(WORKING_DIR, "%s_results.csv" % db_name)
@@ -50,8 +48,9 @@ SHAP_DIR = 'shap'
 
 PLOT_TOP_FEATURES = 10
 
-
-# Comp Model Hyper-Params
+#############################
+## Comp Model Hyper-Params ##
+#############################
 params_ranges = {
     "model__n_estimators": (5, 10000),
     "model__learning_rate": (1e-10, 1),
@@ -104,7 +103,9 @@ comp_model_params = {
     "estimator__model__num_leaves": explored_num_leaves,
     "estimator__model__objective": ['binary'],
 }
-
+#################################
+#################################
+#################################
 y_values_encoding = {'tested_negative': -1, 'schizophrenic': 1, 'Lewis': -1, 'sn': -1, 'cn': 1, 'excellent': 2,
                      'not_suitable': 0, 'Tile': -1, 'republican': -1, 'democrat': 1, 'ok': 1, 'dead': -1,
                      'non-schizophrenic': -1, 'Holyfield': 1, 'bad': -1, 'tested_positive': 1, 'P': 1, 'good': 1,

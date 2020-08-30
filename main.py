@@ -87,170 +87,151 @@ def main():
         pass
 
     os.system('mkdir -p {}'.format(MODELS_DIR))
-    if not USE_EXISTING_RESULTS:
 
-        for db_name, X, y in raw_dbs:
-            dbs_results[db_name] = {}
-            X, y = db_encode(db_name, X, y)
+    for db_name, X, y in raw_dbs:
+        dbs_results[db_name] = {}
+        X, y = db_encode(db_name, X, y)
 
-            N = len(X) * (1 - (1 / EVAL_FOLDS))
-            # Our Model Hyper-Params
-            model_params = {
-                'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
-                'estimator__model__T': [3, 5, 10],
-                'estimator__model__reg': [1, 10, 20, 50, 100],
-                'estimator__model__silent': [True],
-                'estimator__model__verbose': [False]
-            }
-            fold_num = 1
+        N = len(X) * (1 - (1 / EVAL_FOLDS))
+        # Our Model Hyper-Params
+        model_params = {
+            'estimator__model__kappa': [1 / 3, 1 / N, 2 / N, 3 / N],
+            'estimator__model__T': [3, 5, 10],
+            'estimator__model__reg': [1, 10, 20, 50, 100],
+            'estimator__model__silent': [True],
+            'estimator__model__verbose': [False]
+        }
+        fold_num = 1
 
-            # list of results per fold
-            folds_results = []
-            comp_folds_results = []
+        # list of results per fold
+        folds_results = []
+        comp_folds_results = []
 
-            is_binary = len(y.unique()) == 2  # No special case for binary
-            try:
-                for train_index, test_index in kf.split(X, y):
-                    print("{}:{}:Fold_{}".format(datetime.now(), db_name, fold_num))
-                    # --- get fold and preprocess --- #
-                    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
-                    y_train, y_test = y[train_index], y[test_index]
+        is_binary = len(y.unique()) == 2  # No special case for binary
+        try:
+            for train_index, test_index in kf.split(X, y):
+                print("{}:{}:Fold_{}".format(datetime.now(), db_name, fold_num))
+                # --- get fold and preprocess --- #
+                X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+                y_train, y_test = y[train_index], y[test_index]
 
-                    invalid_labels = set(y_test.unique()) - set(y_train.unique())
-                    # Introduce new labels, should occur only for outliers due to StratifiedKFold
-                    # Main assumption in classification is that all labels are known upfront
-                    if len(invalid_labels) > 0:
-                        X_train = pd.concat([X_train, pd.DataFrame(
-                            [[np.nan for _ in range(len(X_train.columns))] for _ in range(len(invalid_labels))],
-                            columns=X_train.columns)], ignore_index=True)
-                        y_train = y_train.append(pd.Series(list(invalid_labels)), ignore_index=True)
-                        X_train, y_train = db_encode(db_name, X_train, y_train)
+                invalid_labels = set(y_test.unique()) - set(y_train.unique())
+                # Introduce new labels, should occur only for outliers due to StratifiedKFold
+                # Main assumption in classification is that all labels are known upfront
+                if len(invalid_labels) > 0:
+                    X_train = pd.concat([X_train, pd.DataFrame(
+                        [[np.nan for _ in range(len(X_train.columns))] for _ in range(len(invalid_labels))],
+                        columns=X_train.columns)], ignore_index=True)
+                    y_train = y_train.append(pd.Series(list(invalid_labels)), ignore_index=True)
+                    X_train, y_train = db_encode(db_name, X_train, y_train)
 
-                    preprocessing.fit(X_train, y_train)
-                    X_train = preprocessing.transform(X_train)
-                    X_test = preprocessing.transform(X_test)
+                preprocessing.fit(X_train, y_train)
+                X_train = preprocessing.transform(X_train)
+                X_test = preprocessing.transform(X_test)
 
 
-                    
+                
 
-                    # --- random search --- #
-                    cv = RandomizedSearchCV(estimator=ova_model, param_distributions=model_params,
-                                            scoring=make_scorer(eval_metric), cv=HPT_FOLDS,
-                                            n_iter=RANDOM_CV_ITER, random_state=RANDOM_SEED)
-                    comp_cv = RandomizedSearchCV(estimator=ova_comp_model, param_distributions=comp_model_params,
-                                                 scoring=make_scorer(eval_metric), cv=HPT_FOLDS,
-                                                 n_iter=RANDOM_CV_ITER, random_state=RANDOM_SEED)
+                # --- random search --- #
+                cv = RandomizedSearchCV(estimator=ova_model, param_distributions=model_params,
+                                        scoring=make_scorer(eval_metric), cv=HPT_FOLDS,
+                                        n_iter=RANDOM_CV_ITER, random_state=RANDOM_SEED)
+                comp_cv = RandomizedSearchCV(estimator=ova_comp_model, param_distributions=comp_model_params,
+                                             scoring=make_scorer(eval_metric), cv=HPT_FOLDS,
+                                             n_iter=RANDOM_CV_ITER, random_state=RANDOM_SEED)
 
-                    curr_fold_results = {'fold_num': fold_num}
-                    curr_fold_comp_results = {'fold_num': fold_num}
+                curr_fold_results = {'fold_num': fold_num}
+                curr_fold_comp_results = {'fold_num': fold_num}
 
-                    # --- measure times - FIT + INFER --- #
-                    print("Training our model")
-                    curr_fold_results['train_time'], curr_fold_results['infer_time'] = get_time_metrics(cv, X_train,
-                                                                                                        y_train,
-                                                                                                        X_test)
-                    print("Finished training our model")
-                    print("Training comparison model")
-                    curr_fold_comp_results['train_time'], curr_fold_comp_results['infer_time'] = get_time_metrics(
-                        comp_cv,
-                        X_train,
-                        y_train,
-                        X_test)
-                    print("Finished training comparison model")
+                # --- measure times - FIT + INFER --- #
+                print("Training our model")
+                curr_fold_results['train_time'], curr_fold_results['infer_time'] = get_time_metrics(cv, X_train,
+                                                                                                    y_train,
+                                                                                                    X_test)
+                print("Finished training our model")
+                print("Training comparison model")
+                curr_fold_comp_results['train_time'], curr_fold_comp_results['infer_time'] = get_time_metrics(
+                    comp_cv,
+                    X_train,
+                    y_train,
+                    X_test)
+                print("Finished training comparison model")
 
-                    # --- save trained models --- #
-                    model_path = MODELS_DIR + "/model_fold_" + str(fold_num) + "_db_name_" + db_name
-                    comp_model_path = MODELS_DIR + "/comp_model_fold_" + str(fold_num) + "_db_name_" + db_name
-                    dill.dump(cv.best_estimator_, open(model_path, 'wb'))
-                    dill.dump(comp_cv.best_estimator_, open(comp_model_path, 'wb'))
+                # --- save trained models --- #
+                model_path = MODELS_DIR + "/model_fold_" + str(fold_num) + "_db_name_" + db_name
+                comp_model_path = MODELS_DIR + "/comp_model_fold_" + str(fold_num) + "_db_name_" + db_name
+                dill.dump(cv.best_estimator_, open(model_path, 'wb'))
+                dill.dump(comp_cv.best_estimator_, open(comp_model_path, 'wb'))
 
-                    # --- register best params --- #
-                    best_comp_params = comp_cv.best_params_
-                    best_params = cv.best_params_
-                    curr_fold_comp_results['best_params'] = best_comp_params
-                    curr_fold_results['best_params'] = best_params
-                    # --- get predictions for MultiRBoost --- #
-                    y_test_pred_per_label_scores = cv.predict_proba(X_test)
-                    y_test_pred = cv.predict(X_test)
+                # --- register best params --- #
+                best_comp_params = comp_cv.best_params_
+                best_params = cv.best_params_
+                curr_fold_comp_results['best_params'] = best_comp_params
+                curr_fold_results['best_params'] = best_params
+                # --- get predictions for MultiRBoost --- #
+                y_test_pred_per_label_scores = cv.predict_proba(X_test)
+                y_test_pred = cv.predict(X_test)
 
-                    train_labels = cv.best_estimator_.classes_
-                    comp_train_labels = comp_cv.best_estimator_.classes_  # can be sorted differently
+                train_labels = cv.best_estimator_.classes_
+                comp_train_labels = comp_cv.best_estimator_.classes_  # can be sorted differently
 
-                    # --- get predictions for LightGBM --- #
-                    y_test_pred_comp_per_label_scores = comp_cv.predict_proba(X_test)
-                    y_test_pred_comp = comp_cv.predict(X_test)
+                # --- get predictions for LightGBM --- #
+                y_test_pred_comp_per_label_scores = comp_cv.predict_proba(X_test)
+                y_test_pred_comp = comp_cv.predict(X_test)
 
-                    # --- replace nans with uniform - fixes an error in OneVsRest --- #
-                    y_test_pred_comp_per_label_scores[np.isnan(y_test_pred_comp_per_label_scores)] = 1.0 / \
-                                                                                                     y_test_pred_comp_per_label_scores.shape[
-                                                                                                         1]
+                # --- replace nans with uniform - fixes an error in OneVsRest --- #
+                y_test_pred_comp_per_label_scores[np.isnan(y_test_pred_comp_per_label_scores)] = 1.0 / \
+                                                                                                 y_test_pred_comp_per_label_scores.shape[
+                                                                                                     1]
 
-                    y_test_pred_per_label_scores[np.isnan(y_test_pred_per_label_scores)] = 1.0 / \
-                                                                                           y_test_pred_per_label_scores.shape[
-                                                                                               1]
+                y_test_pred_per_label_scores[np.isnan(y_test_pred_per_label_scores)] = 1.0 / \
+                                                                                       y_test_pred_per_label_scores.shape[
+                                                                                           1]
 
-                    # metrics applicable in multiclass setting ---accuracy, precision--- #
-                    multiclass_metrics_dict = {0: 'accuracy', 1: 'precision'}
+                # metrics applicable in multiclass setting ---accuracy, precision--- #
+                multiclass_metrics_dict = {0: 'accuracy', 1: 'precision'}
 
-                    multiclass_metrics = get_multiclass_metrics(y_test, y_test_pred)
-                    multiclass_comp_metrics = get_multiclass_metrics(y_test, y_test_pred_comp)
+                multiclass_metrics = get_multiclass_metrics(y_test, y_test_pred)
+                multiclass_comp_metrics = get_multiclass_metrics(y_test, y_test_pred_comp)
 
-                    for metric_pos, metric_name in multiclass_metrics_dict.items():
-                        curr_fold_results[metric_name] = multiclass_metrics[metric_pos]
-                        curr_fold_comp_results[metric_name] = multiclass_comp_metrics[metric_pos]
+                for metric_pos, metric_name in multiclass_metrics_dict.items():
+                    curr_fold_results[metric_name] = multiclass_metrics[metric_pos]
+                    curr_fold_comp_results[metric_name] = multiclass_comp_metrics[metric_pos]
 
-                    # Metrics only applicable in a binary setting ---fpr, tpr, pr_auc, roc-auc--- #
-                    binary_metrics_dict = {0: 'fpr', 1: 'tpr', 2: 'pr_auc', 3: 'roc_auc'}
+                # Metrics only applicable in a binary setting ---fpr, tpr, pr_auc, roc-auc--- #
+                binary_metrics_dict = {0: 'fpr', 1: 'tpr', 2: 'pr_auc', 3: 'roc_auc'}
 
-                    binary_metrics = get_binary_metrics(y_test, y_test_pred, y_test_pred_per_label_scores, \
-                                                        train_labels)
-                    binary_comp_metrics = get_binary_metrics(y_test, y_test_pred_comp,
-                                                             y_test_pred_comp_per_label_scores, \
-                                                             comp_train_labels)
+                binary_metrics = get_binary_metrics(y_test, y_test_pred, y_test_pred_per_label_scores, \
+                                                    train_labels)
+                binary_comp_metrics = get_binary_metrics(y_test, y_test_pred_comp,
+                                                         y_test_pred_comp_per_label_scores, \
+                                                         comp_train_labels)
 
-                    for metric_pos, metric_name in binary_metrics_dict.items():
-                        curr_fold_results[metric_name] = binary_metrics[metric_pos]
-                        curr_fold_comp_results[metric_name] = binary_comp_metrics[metric_pos]
+                for metric_pos, metric_name in binary_metrics_dict.items():
+                    curr_fold_results[metric_name] = binary_metrics[metric_pos]
+                    curr_fold_comp_results[metric_name] = binary_comp_metrics[metric_pos]
 
-                    # add the current fold results to the results list
-                    folds_results.append(curr_fold_results)
-                    comp_folds_results.append(curr_fold_comp_results)
+                # add the current fold results to the results list
+                folds_results.append(curr_fold_results)
+                comp_folds_results.append(curr_fold_comp_results)
 
-                    fold_num += 1
-                dbs_results[db_name][OUR_MODEL] = folds_results
-                dbs_results[db_name][COMP_MODEL] = comp_folds_results
+                fold_num += 1
+            dbs_results[db_name][OUR_MODEL] = folds_results
+            dbs_results[db_name][COMP_MODEL] = comp_folds_results
 
-                write_single_db_results(dbs_results[db_name], db_name)
+            write_single_db_results(dbs_results[db_name], db_name)
 
-            except Exception as e:
-                print("ERROR!", e)
-                # catching weird values
-                with open(os.path.join(WORKING_DIR, "bad-dbs.txt"), "a") as f:
-                    dbs_results.pop(db_name)
-                    f.write("{db_name}: {error}\n".format(db_name=db_name, error=e))
+        except Exception as e:
+            print("ERROR!", e)
+            # catching weird values
+            with open(os.path.join(WORKING_DIR, "bad-dbs.txt"), "a") as f:
+                dbs_results.pop(db_name)
+                f.write("{db_name}: {error}\n".format(db_name=db_name, error=e))
 
-                continue
+            continue
 
-        print(dbs_results)
-        write_all_results(dbs_results, PART_NUMBER)
-    else:
-        MODEL_KEY = 'alg_name'
-        FOLD_KEY = 'fold_num'
-        DB_NAME_KEY = 'dataset_name'
-        dbs_results = defaultdict(lambda: defaultdict(lambda: defaultdict(dict)))
-        for file_path in os.listdir(RESULTS_DIR):
-            if file_path.endswith(".csv"):
-                df = pd.read_csv(os.path.join(RESULTS_DIR, file_path))
-                for row in df.to_dict(orient='records'):
-                    model = row[MODEL_KEY]
-                    fold_num = row[FOLD_KEY]
-                    db_name = row[DB_NAME_KEY]
-                    row.pop(MODEL_KEY)
-                    row.pop(FOLD_KEY)
-                    row.pop(DB_NAME_KEY)
-                    dbs_results[db_name][model][fold_num] = row
-        print(dbs_results)
-        write_all_results(dbs_results)
+    print(dbs_results)
+    write_all_results(dbs_results, PART_NUMBER)
 
     print("Done writing results in part %d" % PART_NUMBER)
 
